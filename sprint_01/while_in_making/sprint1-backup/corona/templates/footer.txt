@@ -1,0 +1,1 @@
+document.write ('<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Jacobs University Bremen</p>')

@@ -1,0 +1,42 @@
+##Scripts for the database##
+
+from corona import db
+from corona.models import Visitor, Place, Hospital, Agent
+db.create_all()
+
+visitor1=Visitor(citizen_id='1001', username='visitor1', password='password', visitor_name='First Visitor', address='College Ring 1', city='Bremen', email='visitor1@jacobs-university.de', device_id='111')
+
+db.session.add(visitor1)
+
+db.session.commit()
+
+Visitor.query.all()
+
+
+place1=Place(place_id='1001', username='place1', password='password', place_name='First Place', address='College Ring 3', city='Bremen', email='place1@jacobs-university.de', QRCode='QR will be given')
+
+db.session.add(place1)
+
+db.session.commit()
+
+Place.query.all()
+
+
+hospital1=Hospital(hospital_id='101', username='hospital1', password='password', hospital_name='First Hospital', address='Kirchheide 42, Vegesack', city='Bremen', email='hospital1@bremen.de')
+
+db.session.add(hospital1)
+
+db.session.commit()
+
+Hospital.query.all()
+
+
+agent=Agent(agent_id='1', username='agent', password='password')
+
+db.session.add(agent)
+
+db.session.commit()
+
+Agent.query.all()
+
+

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="forms">
+        <h1>Place LOGIN</h1>
+        <form method="POST" action="">
+            {{form.hidden_tag()}} 
+            <div class="user-pass">
+                {{form.username.label(class="user-pass")}}
+                {{form.username(class="user-pass")}}
+            </div>
+           
+            <div class="user-pass">
+                {{form.password.label(class="user-pass")}}
+                {{form.password(class="user-pass")}}
+            </div>
+
+            <div class="form-check">
+                {{form.remember(class="form-check-input")}}
+                {{form.remember.label(class="form-check-label")}}
+            </div>
+           
+            <div class="user-pass">
+                {{form.submit(class="login")}}
+            </div>
+            <small class="got-account">
+                Need an account?
+                <a href="{{ url_for('selectUserType') }}">Sign Up Here</a>
+            </small>
+        </form>
+    </div>    
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="forms">
+        <h1>Place Registration</h1>
+        <form method="POST" action="">
+            {{form.hidden_tag()}} 
+            <div class="user-pass">
+                {{form.username.label(class="user-pass")}}
+                {{form.username(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.place_name.label(class="user-pass")}}
+                {{form.place_name(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.address.label(class="user-pass")}}
+                {{form.address(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.city.label(class="user-pass")}}
+                {{form.city(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.email.label(class="user-pass")}}
+                {{form.email(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.password.label(class="user-pass")}}
+                {{form.password(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.confirm_password.label(class="user-pass")}}
+                {{form.confirm_password(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.submit(class="login")}}
+            </div>
+            <small class="got-account">
+                Already Registered?
+                <a href="{{ url_for('selectLoginType') }}">Log In</a>
+            </small>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

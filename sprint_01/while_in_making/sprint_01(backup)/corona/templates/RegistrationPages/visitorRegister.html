@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="forms">
+        <h1>Visitor Registration</h1>
+        <form method="POST" action="">
+            <!-- for CSRF token -->
+            {{form.hidden_tag()}} 
+            <div class="user-pass">
+                {{form.username.label(class="user-pass")}}
+                {{form.username(class="user-pass")}}
+            </div>
+            
+            <div class="user-pass">
+                <!-- {{form.username.label(class="user-pass")}}
+
+                {% if form.username.errors %}
+                    {{form.username(class="user-pass user-pass-is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.username(class="user-pass")}}
+                {% endif %} -->
+            </div>
+            <div class="user-pass">
+                {{form.visitor_name.label(class="user-pass")}}
+                {{form.visitor_name(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.address.label(class="user-pass")}}
+                {{form.address(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.city.label(class="user-pass")}}
+                {{form.city(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.email.label(class="user-pass")}}
+                {{form.email(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.device_id.label(class="user-pass")}}
+                {{form.device_id(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.password.label(class="user-pass")}}
+                {{form.password(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.confirm_password.label(class="user-pass")}}
+                {{form.confirm_password(class="user-pass")}}
+            </div>
+            <div class="user-pass">
+                {{form.submit(class="login")}}
+            </div>
+
+            <small class="got-account">
+                Already Registered?
+                <a href="{{ url_for('selectLoginType') }}">Log In</a>
+            </small>
+        </form>
+    </div>
+</div>
+{% endblock %}

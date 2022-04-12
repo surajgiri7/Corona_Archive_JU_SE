@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<!-- <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Corona Archive</a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="">Scan QR</a></li>
+                    <li><a href="./selectUserType.html">login</a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </div> -->
+
+
+<!-- <div class="home">
+    <div class="main"> -->
+<div class="row">
+    <div class="col1">
+        <div class="card">
+            <h2>Please Select your respective login type</h2>
+        </div>
+        <div class="card">
+            <h2>Visitor</h2>
+            <p>You can login as a visitor here</p>
+            <a href="{{ url_for('visitorLogin') }}">
+                <button>
+                    <p>login</p>
+                </button>
+            </a>
+        </div>
+        <div class="card">
+            <h2>Place</h2>
+            <p>You can login for a place here</p>
+            <a href="{{ url_for('placeLogin') }}">
+            <button>
+                <p>login</p>
+            </button>
+            </a>
+        </div>
+        <div class="card">
+            <h2>Agent</h2>
+            <p>You can login for as an agent here</p>
+            <a href="{{ url_for('agentLogin') }}">
+            <button>
+                <p>login</p>
+            </button>
+            </a>
+        </div>
+        <div class="card">
+            <h2>Hospitals</h2>
+            <p>You can login as Hospitals here</p>
+            <a href="{{ url_for('hospitalLogin') }}">
+            <button>
+                <p>login</p>
+            </button>
+            </a>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+<!-- </div>
+</div> -->
+
+<!-- <footer class="footer">
+    <script language="javascript" type="text/javascript" src="../footer.txt"></script>
+</footer> -->
+
+{% endblock %}
