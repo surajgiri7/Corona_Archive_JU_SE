@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block title%}Agent_Page{%endblock%}
+
+{%block content%}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/agent_page.css') }}">
+
+  <div class="hero">
+      <div class="form-box">
+        <h1 style="text-align:center;">Select:</h1>
+        <a href="/agent/{{username}}/allusersaccess" class="pagelinks">Visitors & Owners Access</a>
+        <a href="/agent/{{username}}/allplacesaccess" class="pagelinks">All Places Access</a>
+        <a href="/agent/{{username}}/allhospitalsaccess" class="pagelinks">All Hospitals Access</a>
+        <a href="/agent/{{username}}/visitedplacesaccess" class="pagelinks">Visited Places Access</a>
+        <a href="/agent/{{username}}/addhospital" class="pagelinks">Add hospital</a>
+      </div>
+  </div>
+{%endblock%}

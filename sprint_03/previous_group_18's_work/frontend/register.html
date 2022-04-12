@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="static/style.css">
+    <title>MANAGIT - Corona disease management</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./static/images/favicon.png">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btnr"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <div class="logo-r">
+                <img src="./static/images/full-logo.png" alt="MANAGIT">
+            </div>
+
+            <div class="msg"> <p><br>{{ msg }}</p> </div>
+
+            <form id="login" class="input-grp" method="post" action="/login">
+                <input id="username" name="username" type="text" class="input-field" placeholder="Username" required>
+                <input id="password" name="password" type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box"><span id="spanr" required>Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form id="register" class="input-grp" method="post" action="/register">
+                <input id="name" name="name" type="text" class="input-field" placeholder="Enter your name" required>
+                <input id="email" name="email" type="email" class="input-field" placeholder="Enter your email">
+                <input id="phone" name="phone" type="text" class="input-field" placeholder="Enter your phone number">
+                <input id="address" name="address" type="text" class="input-field" placeholder="Address" required>
+                <input id="username" name="username" type="text" class="input-field" placeholder="Username" required>
+                <input id="password" name="password" type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box"><span id="spanr" required>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./static/javascript/reg.js"></script>
+</body>
+</html>

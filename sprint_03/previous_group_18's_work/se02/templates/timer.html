@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%}Timer{%endblock%}
+{%block content%}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/timer.css') }}">
+  <div class="timingbox">
+    <h2>You have entered: {{placename}} </h2>
+    <span id="minutes">00</span>:<span id="seconds">00</span>
+    <br>
+    <form method="post">
+      <input type="submit" value="Leave" name="button" id="leavebutton">
+    </form>
+
+  </div>
+
+  <script type="text/javascript">
+    var sec = 0;
+    function pad ( val ) { return val > 9 ? val : "0" + val; }
+    setInterval( function(){
+      document.getElementById("seconds").innerHTML=pad(++sec%60);
+      document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
+    }, 1000);
+  </script>
+{%endblock%}

@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block title%}All Places {%endblock%}
+{%block content%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/agentaccesspages.css') }}">
+  <form method="POST">
+    <h4>Note: To get all places just press "Search" without filling the search field</h4><br>
+    <input id="searchbar" type="search" placeholder="Search Places By Name" name="searchbar" value="" >
+    <input type="submit" name="" value="Search">
+    <table class="infotable">
+      <tr>
+        <th>PlaceID</th>
+        <th>Place Name</th>
+        <th>Place Address</th>
+        <th>QRCode</th>
+      </tr>
+      {%for place in places%}
+        <tr>
+          <td>{{place[0]}}</td>
+          <td>{{place[1]}}</td>
+          <td>{{place[2]}}</td>
+          <td>{{place[3]}}</td>
+        </tr>
+      {%endfor%}
+    </table>
+  </form>
+  <a href="/agent/{{username}}">Go back</a>
+  
+{%endblock%}

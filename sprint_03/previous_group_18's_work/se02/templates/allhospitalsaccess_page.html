@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block title%}All Users{%endblock%}
+{%block content%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/agentaccesspages.css') }}">
+
+  <form method="POST">
+    <h4>Note: To get all users just press "Search" without filling the search field</h4><br>
+    <input id="searchbar" type="search" placeholder="Search Users By Name" name="searchbar" value="" >
+    <input type="submit" name="" value="Search">
+    <table class="infotable">
+      <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+      </tr>
+      {%for hospital in hospitals%}
+        <tr>
+          <td>{{hospital[0]}}</td>
+          <td>{{hospital[1]}}</td>
+          <td>{{hospital[2]}}</td>
+          <td>{{hospital[3]}}</td>
+          <td>{{hospital[4]}}</td>
+        </tr>
+      {%endfor%}
+    </table>
+    <a href="/agent/{{username}}">Go back</a>
+{%endblock%}
