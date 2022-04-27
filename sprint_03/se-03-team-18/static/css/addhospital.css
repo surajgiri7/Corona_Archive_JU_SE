@@ -1,0 +1,74 @@
+.hero {
+  padding: 3rem;
+}
+.form-box {
+  width: 380px;
+  height: 650px;
+  position: relative;
+  margin: 6% auto;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 5px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromLeft; /* the name of the animation we defined above */
+}
+h1 {
+  margin-top: 40px;
+}
+.submitbtn {
+  cursor: pointer;
+  background-color: #88293D;
+  float: left;
+  color: white;
+  width: 190px;
+  /* margin-left: 30px; */
+  border-radius: 12px;
+  border: 1px grey solid;
+  text-align: center;
+  border: white solid;
+}
+.submitbtn:hover {
+  background-color: #6f2233;
+font-weight: bold;
+}
+
+.back {
+  border: none;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #88293D;
+  
+}
+
+.back a{
+  text-decoration: none;
+  color: white;
+}
+
+.back:hover {
+  background-color: #6f2233;
+  font-weight: bold;
+  color: white;
+  border: 2px white solid;
+}
+
+
+input {
+  padding: 10px 10px;
+  width: 100%;
+  font-size: 18px;
+  display: block;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: 1px grey solid;
+}
+input::placeholder {
+  text-align: center;
+}
