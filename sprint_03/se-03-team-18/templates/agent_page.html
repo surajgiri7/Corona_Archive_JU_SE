@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%block body%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/agent_page.css') }}">
+<div class="hero">
+  <form class="logout" action="{{ url_for('logout') }}">
+    <button type="submit" id="logout" name="logout">Logout</button>
+  </form>
+  <div class="form-box">
+    <h1 style="text-align:center;">Select:</h1>
+    <a href="/agent/{{Username}}/allusersaccess" class="pagelinks">Access All Visitors & Owners</a>
+    <a href="/agent/{{Username}}/visitedplacesaccess" class="pagelinks">Access All Visited Places</a>
+    <a href="/agent/{{Username}}/allplacesaccess" class="pagelinks">Access All Places</a>
+    <a href="/agent/{{Username}}/allhospitalsaccess" class="pagelinks">Access All Hospitals</a>
+    <a href="/agent/{{Username}}/addhospital" class="pagelinks">Add hospital</a>
+    <a href="/agent/{{Username}}/trackInfection" class="pagelinks">Track Possible Infections</a>
+  </div>
+
+</div>
+{%endblock%}

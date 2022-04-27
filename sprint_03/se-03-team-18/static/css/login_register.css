@@ -1,0 +1,156 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromLeft2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+.errormsg {
+  color: red;
+  text-align: center;
+}
+.hero {
+  padding: 3rem;
+  
+}
+
+.form-box {
+  width: 380px;
+  height: 620px;
+  position: relative;
+  margin: 6% auto;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 5px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromLeft; /* the name of the animation we defined above */
+}
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  border: solid 1px rgb(236, 236, 236);
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btnr {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #00a748, #ffbb3b);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.logo-r img {
+  width: 80%;
+  margin-left: 42px;
+  position: absolute;
+  top: 100px;
+}
+
+.input-grp {
+  top: 180px;
+  position: absolute;
+  margin-left: 50px;
+  width: 280px;
+  transition: 0.5s;
+}
+
+#alreadyregisteredlink {
+  position: absolute;
+  bottom: 50px;
+  margin-left: 100px;
+  width: 200px;
+}
+
+#registerownerlink {
+  position: absolute;
+  bottom: 70px;
+  margin-left: 90px;
+  width: 200px;
+}
+
+#registervisitorlink {
+  position: absolute;
+  bottom: 70px;
+  margin-left: 110px;
+  width: 200px;
+}
+
+#registerlink {
+  position: absolute;
+  bottom: 200px;
+  width: 120px;
+  margin-left: 130px;
+}
+
+h2 {
+  position: absolute;
+}
+
+p {
+  color: red;
+  position: relative;
+  text-align: center;
+}
+
+#loginusername {
+  margin-top: 30px;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #00a748, #ffbb3b);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.submit-btn:hover {
+  transition: all 0.4s ease;
+  color: white;
+}

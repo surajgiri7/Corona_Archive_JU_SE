@@ -1,0 +1,61 @@
+.showqrcode {
+  overflow: hidden;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+}
+#downloadbutton {
+  margin-left: 40px;
+}
+#newplacebutton {
+  margin-left: 55px;
+}
+.actionbuttons {
+  font-family: "Asap", sans-serif;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100px;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: black;
+}
+button:hover {
+  background-color: red;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#qrcode {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.submitbtn {
+  color: black;
+
+  background-color: white;
+  border: none;
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #88293d;
+  text-decoration: none;
+}
+
+.submitbtn:hover {
+  background-color: #6f2233;
+  font-weight: bold;
+  color: white;
+  border: 2px white solid;
+}

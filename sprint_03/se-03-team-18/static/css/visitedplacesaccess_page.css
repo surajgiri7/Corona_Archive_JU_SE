@@ -1,0 +1,75 @@
+.hero {
+  padding-top: 3rem;
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.infotable {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.infotable thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.infotable th,
+.infotable td {
+  padding: 12px 15px;
+}
+.infotable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.infotable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.infotable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.infotable tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+td {
+  text-align: center;
+}
+.searchbar {
+  width: 182px;
+  margin: 0 auto;
+}
+.searchbar::placeholder {
+  text-align: center;
+}
+
+.submitbtn {
+  color: black;
+  
+  background-color: white;
+  border: none;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #88293D;
+  text-decoration: none;
+}
+.submitbtn:hover {
+  background-color: #6f2233;
+  font-weight: bold;
+  color: white;
+  border: 2px white solid;
+}

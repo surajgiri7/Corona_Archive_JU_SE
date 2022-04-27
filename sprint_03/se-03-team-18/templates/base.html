@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <!-- <link rel="stylesheet" href="static/style.css"> -->
+  <!-- <title>MANAGIT - Corona disease management</title> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="./static/images/favicon.png">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- <style media="screen">
+
+    
+  </style> -->
+  {% if title %}
+  <title>MANAGIT - {{ title }}</title>
+  {% else %} <title>MANAGIT</title>
+  {% endif %}
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  {%block body%}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flash">
+    {% for category, message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+  {%endblock%}
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%block body%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hospital_page.css') }}">
+<div class="hero">
+  <form class="logout" action="{{ url_for('logout') }}">
+    <button type="submit" id="logout" name="logout">Logout</button>
+  </form>
+  <form method="POST">
+    <h4>The List of all the Users(Visitors) who visited certain places is as follow!</h4><br>
+    <table class="userstable">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Status(1=infected,0=not infected)</th>
+        <th>Mark Infected</th>
+      </tr>
+      {%for user in users%}
+      <tr>
+        <td>{{user[0]}}</td>
+        <td>{{user[1]}}</td>
+        <td>{{user[2]}}</td>
+        <td>{{user[3]}}</td>
+        <td>{{user[4]}}</td>
+        <td>
+          {%if user[4]==0%}
+          <input type="checkbox" name="mycheckbox" value={{user[5]}}>
+          {%else%}
+          <input type="checkbox" name="mycheckbox" value={{user[5]}} checked>
+          {%endif%}
+        </td>
+      </tr>
+      {%endfor%}
+    </table>
+    <input type="submit" name="" value="UPDATE" class="submitbtn">
+  </form>
+</div>
+
+{%endblock%}

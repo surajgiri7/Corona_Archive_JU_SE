@@ -1,0 +1,77 @@
+.hero {
+  padding-top: 1rem;
+  display: block;
+  text-align: center;
+  height: 100%;
+}
+
+
+.placeform{
+  overflow: hidden;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  margin:auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform:translate(-50%, -50%);
+  box-shadow: 5px 10px 10px;
+  border-radius: 8%;
+}
+#qrcode{
+  margin-left: 40px;
+}
+input{
+  font-family: 'Asap',sans-serif;
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  width: 100%;
+}
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.submitbutton{
+  margin-bottom: 15px;
+}
+
+.infotable {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.infotable thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.infotable th,
+.infotable td {
+  padding: 12px 15px;
+}
+.infotable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.infotable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.infotable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.infotable tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+td{
+text-align: center;
+}

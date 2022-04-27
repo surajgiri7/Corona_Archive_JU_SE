@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+</script>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet"
+  type="text/css" />
+{% endblock %}
+
+{%block body%}
+<script>
+  $(function () {
+    var availableTags = [
+      {%for name in names %}
+            "{{name}}",
+    {% endfor %}
+    ];
+  $("#name").autocomplete({
+    source: availableTags
+  });
+  } );
+
+</script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/agentaccesspages.css') }}">
+
+<div class="hero">
+  <form method="POST">
+    <h4>Note: To get all users just press "Search" without filling the search field</h4><br>
+    <input id="name" type="search" placeholder="Search by Name" name="name" value="">
+    <input type="submit" name="" value="Search">
+
+    <a href="/agent/{{username}}" class="submitbtn">Go back</a>
+
+    <table class="infotable">
+      <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+      </tr>
+      {%for hospital in hospitals%}
+      <tr>
+        <td>{{hospital[0]}}</td>
+        <td>{{hospital[1]}}</td>
+        <td>{{hospital[2]}}</td>
+        <td>{{hospital[3]}}</td>
+        <td>{{hospital[4]}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </form>
+</div>
+{%endblock%}
