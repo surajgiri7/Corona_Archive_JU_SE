@@ -1,0 +1,132 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromTop2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+.errormsg {
+  color: red;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hero {
+  padding: 3rem;
+  color: black;
+}
+
+.loginbox{
+  padding-top: 1rem;
+  width: 380px;
+  height: 500px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgb(58 58 141 / 30%);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;   
+  text-align: center;
+}
+
+.register-row{
+  padding-top: 1rem;
+  height: 600px;
+  width: 100%;
+  position: relative;
+  margin: 10% auto;
+  background-color: rgba(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;   
+  text-align: center;
+}
+
+.register-col {
+  float: left;
+  width: 50%;
+  height: inherit;
+}
+
+.register-col img{
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.register-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.loginbox:hover{
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 100, 10, 0.3);
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+}
+.errormsg{
+  color: red;
+}
+input{
+  font-family: 'Asap',sans-serif;
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  width: 100%;
+}
+.submitbutton {
+  float: left;
+  font-family: 'Asap', sans-serif;
+  cursor: pointer;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 90px;
+  border: none;
+  padding: 10px 0;
+  margin: 10px 20px;
+  border-radius: 10px;
+  background-color: black;
+}
+.submitbutton:hover{
+  background-color:red;
+}

@@ -1,0 +1,227 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromTop2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+.errormsg {
+  color: red;
+  text-align: center;
+}
+.hero {
+  padding: 3rem;
+}
+
+.intro {
+  background: rgb(255 255 255 /60%);
+  border-radius: 10px;
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 40px;
+}
+.intro {
+  position: relative;
+}
+.intro span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: flip 4s infinite;
+  animation-delay: calc(0.5s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+.form-box {
+  width: 380px;
+  height: 400px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgb(58 58 141 / 30%);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;
+  text-align: center;
+}
+
+.form-box:hover {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 100, 10, 0.3);
+}
+
+.login-row {
+  padding-top: 1rem;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;
+  text-align: center;
+}
+
+.login-col {
+  float: left;
+  width: 50%;
+  height: inherit;
+}
+
+.login-col img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.login-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+}
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  border: solid 1px rgb(236, 236, 236);
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #ffbb3b, #3b4aff);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.logo-r img {
+  width: 80%;
+  margin-left: 42px;
+  position: absolute;
+  top: 100px;
+}
+
+.input-grp {
+  top: 80px;
+  position: absolute;
+  margin-left: 50px;
+  width: 280px;
+  transition: 0.5s;
+}
+
+#alreadyregisteredlink {
+  position: absolute;
+  bottom: 50px;
+  margin-left: 100px;
+  width: 200px;
+}
+
+#registerownerlink {
+  position: absolute;
+  bottom: 70px;
+  margin-left: 90px;
+  width: 200px;
+}
+
+#registervisitorlink {
+  position: absolute;
+  bottom: 70px;
+  margin-left: 110px;
+  width: 200px;
+}
+
+#registerlink {
+  position: absolute;
+  bottom: 80px;
+  left: 35%;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  color: red;
+  position: relative;
+  text-align: center;
+}
+
+#loginusername {
+  margin-top: 30px;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #ffbb3b, #3b4aff);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.submit-btn:hover {
+  transition: all 0.4s ease;
+  color: black;
+}

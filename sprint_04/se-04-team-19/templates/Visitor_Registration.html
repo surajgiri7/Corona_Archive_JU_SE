@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%block body%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
+<div class="hero">
+  <div class="register-row">
+
+    <div class="register-col">
+      <img src="/static/images/registration.jpg" alt="">
+    </div>
+
+    <div class="register-col">
+      <div class="loginbox">
+        <h1>Visitor Registration!</h1>
+        {%if fillerror%}
+        <p class="errormsg">Please enter an Email or a Phone Number!</p>
+        {%endif%}
+        {%if usernametaken%}
+        <p class="errormsg">That username is taken, please enter a new one!</p>
+        {%endif%}
+        <p></p>
+        <form class="login" action="{{url_for('register_visitor')}}" method="POST">
+          <input id="name" name="name" type="text" class="input-field" placeholder="Enter your name" required>
+          <input id="email" name="email" type="email" class="input-field" placeholder="Enter your email">
+          <input id="phone" name="phone" type="text" class="input-field" placeholder="Enter your phone number">
+          <input id="address" name="address" type="text" class="input-field" placeholder="Address" required>
+          <input id="username" name="username" type="text" class="input-field" placeholder="Username" required>
+          <input id="psw" name="psw" type="password" class="input-field" placeholder="Password" required>
+          <input type="submit" class="submit-btn" value="Register">
+          <a class="alreadyregistered" href="{{url_for('login_page')}}">Already registered?</a>
+          <a class="placeownerlink" href="{{url_for('register_owner')}}">Are you a place owner?</a>
+        </form>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+{%endblock%}

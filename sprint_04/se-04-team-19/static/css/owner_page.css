@@ -1,0 +1,103 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromTop2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+.placeform{
+  padding-top: 1rem;
+  width: 380px;
+  height: 400px;
+  position: relative;
+  margin-top: 3rem;
+  margin: 6% auto;
+  background-color: rgb(58 58 141 / 30%);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;   
+  text-align: center;
+}
+
+.placeform:hover{
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 100, 10, 0.3);
+}
+
+.owner-row{
+  padding-top: 1rem;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgba(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;   
+  text-align: center;
+}
+
+.owner-col {
+  float: left;
+  width: 50%;
+  height: inherit;
+}
+
+.owner-col img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+.owner-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#qrcode{
+  margin-left: 40px;
+}
+input{
+  font-family: 'Asap',sans-serif;
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+}
+#submitbutton{
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #ffbb3b, #3b4aff);
+}

@@ -1,0 +1,117 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromTop2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.hero{
+  padding: 3rem;
+}
+.form-box{
+  width: 380px;
+  height: 380px;
+  position: relative;
+  margin: 6% auto;
+  background-color: rgb(58 58 141 / 30%);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 5px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromLeft; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;    
+}
+
+.form-box:hover{
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 100, 10, 0.3);
+}
+
+.agent-row{
+  margin-top: 5rem;
+  padding-top: 1rem;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  margin: 15% auto;
+  background-color: rgba(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  animation-duration: 1s; /* the duration of the animation */
+  animation-timing-function: ease-in-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromTop; /* the name of the animation we defined above */
+  box-shadow: 5px 10px 10px black;   
+  text-align: center;
+}
+
+.agent-col {
+  float: left;
+  width: 50%;
+  height: inherit;
+}
+
+.agent-col img{
+  margin-top: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.agent-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1{
+  margin-top: 40px;
+}
+
+.pagelinks{
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  width: 250px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 63px;
+  margin-top: 10px;
+  padding-top: 4px;
+  border:2px black solid;
+  color: black;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffbb3b, #3b4aff);
+  box-shadow: 5px 10px 10px;
+}
+
+.pagelinks:hover{
+  background-color: black;
+  color: white;
+  border:2px white solid;
+}
+
+.allbuttons{
+  width: 80%;
+  margin:0 auto;
+}

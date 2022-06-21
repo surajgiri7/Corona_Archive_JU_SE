@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+</script>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet"
+  type="text/css" />
+{% endblock %}
+
+{%block body%}
+<script>
+  $(function () {
+    var availableTags = [
+      {%for name in names %}
+            "{{name}}",
+    {% endfor %}
+    ];
+  $("#name").autocomplete({
+    source: availableTags
+  });
+  } );
+
+</script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/analyticsPages.css') }}">
+<div class="hero">
+  <div class="analytics-row">
+    <form method="POST">
+      <h4>Note: To get all places just press "Search" without filling the search field</h4><br>
+      <input id="name" type="search" placeholder="Search By Name" name="name" value="">
+      <input type="submit" name="" value="Search">
+
+      <a href="/agent/{{username}}" class="submitbtn">Go back</a>
+
+      <table class="infotable">
+        <tr>
+          <th>PlaceID</th>
+          <th>Place Name</th>
+          <th>Place Address</th>
+          <th>QRCodeData</th>
+        </tr>
+        {%for place in places%}
+        <tr>
+          <td>{{place[0]}}</td>
+          <td>{{place[1]}}</td>
+          <td>{{place[2]}}</td>
+          <td>{{place[3]}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    </form>
+  </div>
+</div>
+
+{%endblock%}

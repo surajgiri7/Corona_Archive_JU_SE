@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/analyticsPages.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+</script>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet"
+  type="text/css" />
+{% endblock %}
+
+{%block body%}
+<script>
+  $(function () {
+    var availableTags = [
+      {%for name in names %}
+            "{{name}}",
+    {% endfor %}
+    ];
+  $("#searchbar").autocomplete({
+    source: availableTags
+  });
+  } );
+</script>
+
+<div class="hero">
+  <div class="analytics-row">
+    <form method="POST">
+      <h4>Note: To get all users just press "Search" without filling the search field</h4><br>
+      <input id="searchbar" type="search" placeholder="Search By Name" name="searchbar" value="">
+      <input type="submit" name="" value="Search">
+
+      <a href="/agent/{{username}}" class="submitbtn">Go back</a>
+
+      <table class="infotable">
+        <tr>
+          <th>UserID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Status(1=infected,0=not infected)</th>
+          <th>User Type</th>
+        </tr>
+        {%for user in users%}
+        <tr>
+          <td>{{user[0]}}</td>
+          <td>{{user[1]}}</td>
+          <td>{{user[2]}}</td>
+          <td>{{user[3]}}</td>
+          <td>{{user[4]}}</td>
+          <td>{{user[5]}}</td>
+          <td>{{user[6]}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    </form>
+  </div>
+</div>
+
+
+{%endblock%}

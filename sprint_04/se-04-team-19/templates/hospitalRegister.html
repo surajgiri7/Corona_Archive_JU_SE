@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%block body%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/agentAddHospital.css') }}">
+<div class="hero">
+  <div class="back">
+    <a href="/agent/{{username}}">Go back</a>
+  </div>
+  <div class="register-row">
+    <div class="register-col">
+      <img src="/static/images/hospital.png" alt="">
+    </div>
+    <div class="register-col">
+      <div class="loginbox">
+        <form class="login" method="POST">
+          <h1>Add a hospital account</h1>
+          {%if usernametaken%}
+          <p style="color:red; text-align:center;">Username is taken</p>
+          {%endif%}
+          <input id="name" name="name" type="text" class="input-field" value="" placeholder="Hospital Name" required>
+          <input id="address" name="address" type="text" class="input-field" value="" placeholder="Hospital Address" required>
+          <input id="phone" name="phonenumber" type="text" class="input-field" value="" placeholder="Hospital Phone Number" required>
+          <input id="email" name="email" type="text" class="input-field" value="" placeholder="Hospital Email" required>
+          <input id="username" name="username" type="text" class="input-field" value="" placeholder="Hospital Username" required>
+          <input id="psw" name="password" type="text" class="input-field" value="" placeholder="Hospital Password" required>
+          <input type="submit" name="" value="Add hospital" class="submit-btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%block title%}You're In{%endblock%}
+{%block content%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/yourein.css') }}">
+
+<div>
+  <form class=exiting>
+    <h1>You're in.</h1>
+  </form>
+    <form class="leave" method="POST">
+      <a style=" position: fixed;
+      left:50%;
+      top:60%;
+      transform: translate(-50%, -50%);">
+        <button type="submit" id="yourein" name="yourein">Logout</button>
+      </a>
+    </form>
+</div>
+{%endblock%}

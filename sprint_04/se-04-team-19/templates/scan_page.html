@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%block body%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/scan_page.css') }}">
+<script src="https://reeteshghimire.com.np/wp-content/uploads/2021/05/html5-qrcode.min_.js"></script>
+
+<div class="hero">
+  <div class="videobox">
+    <h1>You have logged in as: {{Username}}</h1>
+    <div class="row">
+      <div class="col">
+        <div id="reader" style="width:500px"></div>
+      </div>
+      <div class="col" style="padding:30px">
+        <h4>SCAN RESULT HERE!</h4>
+        <span id="name"></span><br>
+        <span id="address"></span>
+      </div>
+      <form class="" method="POST" action="#">
+        <input type="text" id="place_name" class="input-hidden" name="place_name" value="" required>
+        <input type="text" id="place_address" class="input-hidden" name="place_address" value="" requrired>
+        <input type="submit" name="" value="Submit", id="submit-btn">
+      </form>
+    </div>
+  </div>
+  <script>
+    function onScanSuccess(qrCodeMessage) {
+      placename = qrCodeMessage.substring(0, qrCodeMessage.indexOf('/'))
+      placeaddress = qrCodeMessage.substring(qrCodeMessage.indexOf('/') + 1, qrCodeMessage.length)
+      document.getElementById('name').innerHTML = 'Place name:' + placename
+      document.getElementById('address').innerHTML = 'Place address:' + placeaddress
+      document.getElementById('place_name').value = placename
+      document.getElementById('place_address').value = placeaddress
+    }
+
+    function onScanFailure(error) {
+      console.warn(`Code scan error = ${error}`);
+    }
+
+    let html5QrcodeScanner = new Html5QrcodeScanner(
+      "reader",
+      { fps: 10, qrbox: { width: 250, height: 250 } });
+    html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+  </script>
+
+
+  <form class="logout" action="{{ url_for('logout') }}">
+    <button type="submit" id="logout" name="logout">Logout</button>
+  </form>
+</div>
+
+
+{%endblock%}

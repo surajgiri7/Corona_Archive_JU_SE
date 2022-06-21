@@ -1,0 +1,34 @@
+.videobox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
+  h1{
+    text-align: center;
+  }
+  #videoElement {
+      width: 500px;
+      height: 375px;
+      background-color: black;
+    border: 10px solid ;
+  }
+  .exiting{
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    margin:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform:translate(-50%, -50%);
+    box-shadow: 5px 10px 10px;
+    border-radius: 13%;;
+  }
+  .leave{
+    position:absolute;
+    left:47%;
+    top:75%;
+  }

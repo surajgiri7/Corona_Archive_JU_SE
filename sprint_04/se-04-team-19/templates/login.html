@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%block body%}
+<link rel="icon" type="image/x-icon" href="./static/images/favicon.png">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+<div class="hero">
+    <div class="intro">
+        <h1>
+            <span>WELCOME</span>
+            <span>TO</span>
+            <span>CORONA</span>
+            <span>ARCHIVE</span>
+            <span>!!!</span>
+        </h1>
+    </div>
+
+    <div class="login-row">
+
+        <div class="login-col">
+            <img src="/static/images/login.jpg" alt="">
+            <div class="option">
+                <ul>
+                    <a id="imprintlink" href="{{url_for('imprint')}}">IMPRINT</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="login-col">
+            <div class="form-box">
+                {%if error%}
+                <p>Account does not exist or wrong password.</p>
+                {%endif%}
+                <form class="input-grp" method="POST">
+                    <h2>Log In</h2>
+                    <input id="loginusername" name="username" type="text" class="input-field" placeholder="Username"
+                        required>
+                    <input id="psw" name="psw" type="password" class="input-field" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </form>
+                <a id="registerlink" href="{{url_for('register_visitor')}}">Not registered?</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="./static/javascript/reg.js"></script>
+{%endblock%}

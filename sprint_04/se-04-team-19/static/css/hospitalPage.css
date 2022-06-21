@@ -1,0 +1,87 @@
+.hero {
+  padding-top: 3rem;
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+h3{
+  margin-top: 3rem;
+}
+
+.userstable {
+  border-collapse: collapse;
+  border-radius: 5px;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.userstable thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.userstable th{
+  background-color: #87c2b4;
+  border: 3px solid;
+  border-radius: 5px;
+}
+
+.userstable th,
+.userstable td {
+  padding: 12px 15px;
+}
+.userstable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.userstable tbody tr:nth-of-type(even) {
+  background-color: #a9a7b8;
+}
+
+.userstable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.userstable tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+td {
+  text-align: center;
+}
+
+.submitbtn {
+  width: 9%;
+  color: white;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  top: 2rem;
+  right: 5rem;
+  position: absolute;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffbb3b, #3b4aff);
+  text-align: center;
+}
+.submitbtn:hover {
+  background-color: black;
+  color: white;
+  border: 2px white solid;
+}
+
+.hospital-row{
+  background-color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  margin-top: 5rem;
+}
