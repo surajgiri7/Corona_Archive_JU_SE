@@ -15,7 +15,7 @@ diagnostic-analysis==1.11.0
 diagnostic-common-diagnostics==1.10.4
 diagnostic-updater==1.11.0
 dynamic-reconfigure==1.7.2
-Flask==2.1.1
+Flask==2.2.5
 Flask-Login==0.6.0
 gazebo_plugins==2.9.2
 gazebo_ros==2.9.2
